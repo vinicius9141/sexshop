@@ -1,0 +1,44 @@
+:host {
+  .container {
+    display: flex;
+    align-items: center;
+    background-color: #b331e6;
+    height: 10vw;
+    padding: 1vw;
+
+    .iconMenu {
+      width: 100vw;
+      height: auto;
+
+      img {
+        width: 8vw;
+      }
+    }
+  }
+
+  .menuOpen {
+    width: 50vw;
+    height: 100%;
+    padding: 2vw;
+    position: absolute;
+    left: -60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: coral;
+    color: #fff;
+    font-size: 5vw;
+    list-style: none;
+    transition: all 0.5s ease;
+    z-index: 2;
+
+    ul {
+      margin-top: 2vw;
+    }
+  }
+
+  .showMenu {
+    left: 0;
+  }
+}

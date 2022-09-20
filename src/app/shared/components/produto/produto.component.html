@@ -2,10 +2,23 @@
   <div class="produtos">
     <div class="item">
       <h1>PRODUTO 1</h1>
+      <p>Estoque: 50</p>
       <img src="../../assets/img/exemple_img.jpg" />
       <div class="footerItem">
         <p>R$ 14,90</p>
-        <p>Estoque: 50</p>
+        <div class="quantidade">
+          <img
+            class="add-button"
+            src="../../../../assets/icons/add_button.png"
+            (click)="addItem()"
+          />
+          <p>Qnt: {{ quantidade }}</p>
+          <img
+            class="add-button"
+            src="../../../../assets/icons/remove_icon.png"
+            (click)="removeItem()"
+          />
+        </div>
         <div class="buyButton" (click)="buyItem()">Comprar Agora</div>
       </div>
     </div>

@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { ProdutoComponent } from './shared/components/produto/produto.component';
+import { PageComponent } from './page/page.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    PageComponent,
+
+    ProdutosComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,26 +1,5 @@
 <div class="container">
-  <div class="content">
-    <app-produto></app-produto>
-  </div>
-  <div class="content">
-    <app-produto></app-produto>
-  </div>
-  <div class="content">
-    <app-produto></app-produto>
-  </div>
-  <div class="content">
-    <app-produto></app-produto>
-  </div>
-  <div class="content">
-    <app-produto></app-produto>
-  </div>
-  <div class="content">
-    <app-produto></app-produto>
-  </div>
-  <div class="content">
-    <app-produto></app-produto>
-  </div>
-  <div class="content">
-    <app-produto></app-produto>
+  <div class="content" *ngFor="let produto of objProdutos">
+    <app-produto [dadosProduto]="produto"></app-produto>
   </div>
 </div>

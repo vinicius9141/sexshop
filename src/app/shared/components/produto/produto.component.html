@@ -1,11 +1,11 @@
 <div class="container">
   <div class="produtos">
     <div class="item">
-      <h1>PRODUTO 1</h1>
-      <p>Estoque: 50</p>
+      <h1>{{ dadosProduto.nome }}</h1>
+      <p>Estoque: {{ dadosProduto.estoque }}</p>
       <img src="../../assets/img/exemple_img.jpg" />
       <div class="footerItem">
-        <p>R$ 14,90</p>
+        <p>R$ {{ dadosProduto.preco }}</p>
         <div class="quantidade">
           <img
             class="add-button"

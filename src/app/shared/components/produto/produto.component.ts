@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Produto } from '../../interfaces/produto';
 
 @Component({
   selector: 'app-produto',
@@ -7,13 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoComponent {
   public buyButton: string = '';
-  public nome_prod: string = '';
   public quantidade: number = 1;
+  @Input() public dadosProduto: Produto = {
+    nome: '',
+    descricao: '',
+    preco: 0,
+    estoque: 0,
+    imgProduto: '',
+  };
   constructor() {}
 
   public buyItem(): void {
     window.open(
-      `https://api.whatsapp.com/send?l=pt&pho&phone=55129921003778&text=Olá,%20gostaria%20de%20mais%20informações%20Sobre%20o%20produto%20${this.nome_prod} +%20qnt%20  ${this.quantidade}`,
+      `https://api.whatsapp.com/send?l=pt&pho&phone=55129921003778&text=Olá,%20gostaria%20de%20mais%20informações%20Sobre%20o%20produto%20+%20 ${this.dadosProduto.nome} qnt%20 ${this.quantidade}`,
       '_blank'
     );
   }

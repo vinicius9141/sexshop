@@ -8,6 +8,7 @@ import { Produto } from '../shared/interfaces/produto';
 })
 export class ProdutosComponent implements OnInit {
   public objProdutos: Produto[] = [];
+  public myCart: Produto[] = [];
   constructor() {}
 
   ngOnInit() {
@@ -27,6 +28,16 @@ export class ProdutosComponent implements OnInit {
         preco: 1,
         estoque: 7,
       },
+      {
+        nome: 'Andrei nelsom',
+        preco: 100,
+        estoque: 6,
+      },
     ];
+  }
+
+  public addToCart(index: number): void {
+    this.myCart.push(this.objProdutos[index]);
+    console.log(this.myCart);
   }
 }

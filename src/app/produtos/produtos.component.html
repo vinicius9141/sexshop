@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="content" *ngFor="let produto of objProdutos">
-    <app-produto [dadosProduto]="produto"></app-produto>
+  <div class="content" *ngFor="let produto of objProdutos; let index = index">
+    <app-produto
+      [dadosProduto]="produto"
+      (addToCartEmitter)="addToCart(index)"
+    ></app-produto>
   </div>
 </div>

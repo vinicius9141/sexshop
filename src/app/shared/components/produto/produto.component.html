@@ -5,7 +5,7 @@
       <p>Estoque: {{ dadosProduto.estoque }}</p>
       <img src="../../assets/img/exemple_img.jpg" />
       <div class="footerItem">
-        <p>R$ {{ dadosProduto.preco }}</p>
+        <p>R{{ dadosProduto.preco | currency }}</p>
         <div class="quantidade">
           <img
             class="add-button"
@@ -20,6 +20,7 @@
           />
         </div>
         <div class="buyButton" (click)="buyItem()">Comprar Agora</div>
+        <div class="addCart" (click)="addToCart()">Adicionar ao Carrinho</div>
       </div>
     </div>
   </div>

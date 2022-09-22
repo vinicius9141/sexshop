@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Produto } from '../../interfaces/produto';
 
 @Component({
@@ -16,6 +16,9 @@ export class ProdutoComponent {
     estoque: 0,
     imgProduto: '',
   };
+
+  @Output() addToCartEmitter: EventEmitter<any> = new EventEmitter();
+
   constructor() {}
 
   public buyItem(): void {
@@ -31,5 +34,10 @@ export class ProdutoComponent {
 
   public removeItem(): void {
     this.quantidade = this.quantidade - 1;
+  }
+
+  public addToCart(): void {
+    this.addToCartEmitter.emit();
+    console.log('clickComponente');
   }
 }

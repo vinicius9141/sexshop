@@ -12,4 +12,6 @@ export class MenuComponent {
   public toggleMenu(): void {
     this.menu = !this.menu;
   }
+
+  public toggleCart(): void {}
 }

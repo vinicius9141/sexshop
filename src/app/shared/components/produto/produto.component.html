@@ -3,7 +3,8 @@
     <div class="item">
       <h1>{{ dadosProduto.nome }}</h1>
       <p>Estoque: {{ dadosProduto.estoque }}</p>
-      <img src="../../assets/img/exemple_img.jpg" />
+      <img src="../../assets/img/{{ dadosProduto.imgProduto }}" />
+
       <div class="footerItem">
         <p>R{{ dadosProduto.preco | currency }}</p>
         <div class="quantidade">

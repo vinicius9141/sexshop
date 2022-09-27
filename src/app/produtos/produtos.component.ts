@@ -14,30 +14,34 @@ export class ProdutosComponent implements OnInit {
   ngOnInit() {
     this.objProdutos = [
       {
-        nome: 'Bruno',
-        preco: 1000000,
-        estoque: 1,
+        nome: 'Volumão',
+        preco: 15.9,
+        estoque: 18,
+        imgProduto: 'produto1.jpg',
       },
       {
-        nome: 'wendo',
+        nome: 'Qualquer coisa',
         preco: 2,
         estoque: 9,
+        imgProduto: 'produto1.jpg',
       },
       {
-        nome: 'EU MEMO',
-        preco: 1,
-        estoque: 7,
+        nome: 'plug',
+        preco: 10,
+        estoque: 74,
+        imgProduto: 'exemple_img.jpg',
       },
       {
-        nome: 'Andrei nelsom',
+        nome: 'molhada',
         preco: 100,
         estoque: 6,
+        imgProduto: 'produto1.jpg',
       },
     ];
   }
 
   public addToCart(index: number): void {
     this.myCart.push(this.objProdutos[index]);
-    console.log(this.myCart);
+    console.log('objeto foda', this.myCart);
   }
 }
